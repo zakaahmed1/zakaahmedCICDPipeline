@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zaka's Solutions Architect Portfolio</title>
+    <style>
+        /* Dark Theme Background and Text Colors */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Header styling */
+        h1 {
+            color: #00aaff;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+        
+        /* Paragraph styling */
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #b0b0b0;
+        }
+
+        /* Full-width Button styling with background image */
+        .full-width-button {
+            background-image: url('stars_photo3.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #e0e0e0;
+            font-size: 1.5em;
+            padding: 100px 0;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .full-width-button:hover {
+            opacity: 0.7;
+        }
+
+        /* Text style for the button */
+        .python-projects-button,
+        .photography-button {
+            z-index: 2; /* Place text above the overlay */
+            position: relative; /* Needed for z-index to work */
+            font-weight: bold; /* Bold text */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow */
+        }
+
+        /* Image styling */
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #00aaff;
+            border-radius: 10px;
+        }
+        
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1c1c1c;
+            color: #888;
+            font-size: 0.9em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Zaka's Portfolio</h1>
+<p>Hi! Welcome to my portfolio. Explore my projects, skills, and experience.</p>
+
+<a href="about_me.html" class="full-width-button about-me-button" style="background-image: url('aboutme.jpg');">About Me</a>
+
+<!-- Full-width Button to navigate to Python Projects page -->
+<a href="python_projects.html" class="full-width-button python-projects-button" style="background-image: url('python_projects_background.png');">View Python Projects</a>
+
+<!-- Full-width Button with Background Image to navigate to the Photography page -->
+<a href="photography.html" class="full-width-button photography-button" style="background-image: url('stars_photo3.jpg');">Explore Photography</a>
+
+<footer>
+    &copy; 2024 Zaka's Portfolio
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photography - Zaka's Portfolio</title>
+    <style>
+        /* Dark Theme Background and Text Colors */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        /* Header styling */
+        h1 {
+            color: #00aaff;
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+        
+        /* Image styling */
+        img {
+            width: 60%;
+            height: auto;
+            border: 2px solid #00aaff;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        /* Button styling for photo navigation */
+        .photo-nav {
+            background-color: #00aaff;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        .photo-nav:hover {
+            background-color: #0088cc;
+        }
+        
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1c1c1c;
+            color: #888;
+            font-size: 0.9em;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Photography</h1>
+<p>These are some of my photos of the night sky near Aviemore, Scotland. Taken on an iPhone.</p>
+
+<!-- Image Display -->
+<img id="photo" src="stars_photo1.jpg" alt="Photo 1">
+
+<!-- Navigation Buttons -->
+<div>
+    <button class="photo-nav" onclick="showPhoto(1)">Photo 1</button>
+    <button class="photo-nav" onclick="showPhoto(2)">Photo 2</button>
+    <button class="photo-nav" onclick="showPhoto(3)">Photo 3</button>
+    <button class="photo-nav" onclick="showPhoto(4)">Photo 4</button>
+</div>
+
+<!-- Footer -->
+<footer>
+    &copy; 2024 Zaka's Portfolio
+</footer>
+
+<script>
+    function showPhoto(photoNumber) {
+        const photo = document.getElementById("photo");
+        photo.src = "stars_photo" + photoNumber + ".jpg";
+        photo.alt = "Photo " + photoNumber;
+    }
+</script>
+
+</body>
+</html>
