@@ -29,7 +29,6 @@
 
         /* Full-width Button styling with background image */
         .full-width-button {
-            background-image: url('stars_photo3.jpg');
             background-size: cover;
             background-position: center;
             color: #e0e0e0;
@@ -49,11 +48,12 @@
 
         /* Text style for the button */
         .python-projects-button,
-        .photography-button {
-            z-index: 2; /* Place text above the overlay */
-            position: relative; /* Needed for z-index to work */
-            font-weight: bold; /* Bold text */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow */
+        .photography-button,
+        .about-me-button {
+            z-index: 2;
+            position: relative;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
 
         /* Image styling */
@@ -71,9 +71,38 @@
             background-color: #1c1c1c;
             color: #888;
             font-size: 0.9em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        /* Form styling */
+        .form-container {
+            text-align: center;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            max-width: 400px;
+        }
+        .form-container input, .form-container button {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .form-container input {
+            background-color: #333;
+            color: #e0e0e0;
+        }
+        .form-container button {
+            background-color: #00aaff;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #0088cc;
         }
     </style>
 </head>
@@ -89,6 +118,16 @@
 
 <!-- Full-width Button with Background Image to navigate to the Photography page -->
 <a href="photography.html" class="full-width-button photography-button" style="background-image: url('stars_photo3.jpg');">Explore Photography</a>
+
+<div class="form-container">
+    <h2>Submit Your Order</h2>
+    <form id="orderForm" method="get" action="https://un644q01cj.execute-api.eu-west-2.amazonaws.com/1">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="number" name="order_qty" placeholder="Order Quantity" min="1" required>
+        <button type="submit">Submit Order</button>
+    </form>
+</div>
 
 <footer>
     &copy; 2024 Zaka's Portfolio
